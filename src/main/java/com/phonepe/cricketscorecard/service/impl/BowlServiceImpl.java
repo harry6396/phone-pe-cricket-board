@@ -213,7 +213,7 @@ public class BowlServiceImpl implements BowlService {
         int score = 0;
         List<Bowling> bowlingList = bowlRepository.findByMatchIdAndBatsmanTeamId(matchId, teamId);
         for(Bowling bowling : bowlingList) {
-            if(bowling.isValidDelivery()) {
+            if(bowling.getScoreType().canBeCalculated()) {
                 score += Integer.valueOf(bowling.getScoreType().getValue());
             } else {
                 score += Integer.valueOf(bowling.getScoreType().getExtra());

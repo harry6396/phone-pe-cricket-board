@@ -58,8 +58,7 @@ public class Bowling {
 
     public boolean isValidDelivery() {
         return !(ScoreType.NB.equals(this.getScoreType()) ||
-                ScoreType.Wd.equals(this.getScoreType()) ||
-                ScoreType.W.equals(this.getScoreType()));
+                ScoreType.Wd.equals(this.getScoreType()));
     }
 
 }
